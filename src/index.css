@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+#root {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    background-color: #262626;
+    color: #d9d9d9;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    text-align: center;
+}
+
+header > h1 {
+    color: #f9f4da;
+}
+
+header > p {
+    font-size: 1.2rem;
+    color: #8e8e8e;
+}
+
+.game-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f9f4da;
+    width: 100%;
+    min-height: 90px;
+    border-radius: 5px;
+    margin-block: 30px;
+}
+
+.game-status.won {
+    background-color: #10a95b;
+}
+
+.game-status.lost {
+    background-color: #ba2a2a;
+}
+
+.game-status.farewell {
+    background-color: #7A5EA7;
+}
+
+.game-status > h2, .game-status > p {
+    margin: 10px;
+}
+
+.language-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.chip {
+    border-radius: 4px;
+    padding: 10px;
+    position: relative;
+}
+
+.chip.lost::before {
+    content: "💀";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 0.85rem;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.word {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.word > span {
+    height: 45px;
+    width: 45px;
+    background-color: #323232;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #f9f4da;
+}
+
+.word > span.missed-letters {
+    color: #ec5d49;
+}
+
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: 760px;
+    margin-bottom: 40px;
+}
+
+.keyboard > button {
+    height: 45px;
+    width: 45px;
+    background-color: #fcba29;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+.keyboard > button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.new-game {
+    background-color: #11B5E5;
+    border: 1px solid #D7D7D7;
+    border-radius: 4px;
+    width: 225px;
+    height: 40px;
+    padding: 6px 12px;
+    display: block;
+    margin-inline: auto;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.new-game:hover {
+    background-color: #1166e5;
+    color: white;
+}
+
